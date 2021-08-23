@@ -8,6 +8,16 @@ app.mount("/assets", StaticFiles(directory="assets"), name="assets")
 
 IS_DEV = True
 
+"""
+if IS_DEV is true its a dev server, if false its a prod server
+HOST: 0.0.0.0.0
+PORT: 8000
+"""
+
+"""
+Because its a dev server dont share it with outsiders and block every requests to access port 8000 from out of our company's network
+"""
+
 
 class contact(BaseModel):
     name: str
